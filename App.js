@@ -38,7 +38,6 @@ function MainTabs() {
           borderTopWidth: 1,
           borderTopColor: 'rgba(255,255,255,0.08)',
           height: 72,
-          paddingTop: 8,
           paddingBottom: 16,
           paddingHorizontal: 16,
         },
@@ -51,7 +50,7 @@ function MainTabs() {
           fontSize: 12,
         },
         tabBarItemStyle: {
-          paddingVertical: 6,
+          paddingVertical: 0,
         },
       }}
     >
