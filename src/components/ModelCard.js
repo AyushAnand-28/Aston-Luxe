@@ -1,15 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ModelCard({ model }) {
+    const navigation = useNavigation();
+
+    const handlePress = () => {
+        navigation.navigate('ModelDetail', { model });
+    };
+
     return (
-        <View style={styles.card}>
+        <TouchableOpacity 
+            style={styles.card} 
+            onPress={handlePress}
+            activeOpacity={0.8}
+        >
             <Image source={{ uri: model.image }} style={styles.image} />
             <View style={styles.content}>
                 <Text style={styles.name}>{model.name}</Text>
                 <Text style={styles.price}>{model.price}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 

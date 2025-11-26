@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function ContactScreen() {
@@ -8,7 +9,7 @@ export default function ContactScreen() {
     };
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container} edges={['top']}>
             <View style={styles.card}>
                 <Text style={styles.title}>Aston Luxe Showroom</Text>
                 <Text style={styles.item}>123 Park Lane, London</Text>
@@ -19,7 +20,7 @@ export default function ContactScreen() {
                     <Text style={styles.buttonText}>Book a Test Drive</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
     );
 }
 

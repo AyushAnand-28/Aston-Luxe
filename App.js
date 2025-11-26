@@ -1,77 +1,75 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import HomeScreen from './src/screens/HomeScreen';
 import ModelsScreen from './src/screens/ModelsScreen';
+import ModelDetailScreen from './src/screens/ModelDetailScreen';
 import AboutScreen from './src/screens/AboutScreen';
 import ContactScreen from './src/screens/ContactScreen';
 
-const TABS = ['Home', 'Models', 'About', 'Contact'];
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
-export default function App() {
-  const [active, setActive] = useState('Home');
-
-  const renderScreen = () => {
-    switch (active) {
-      case 'Models':
-        return <ModelsScreen />;
-      case 'About':
-        return <AboutScreen />;
-      case 'Contact':
-        return <ContactScreen />;
-      default:
-        return <HomeScreen />;
-    }
-  };
-
+function ModelsStack() {
   return (
-    <View style={{ flex: 1, backgroundColor: '#0B0B0D' }}>
-      <StatusBar style="light" />
-      <SafeAreaView style={{ flex: 1 }} edges={['top', 'left', 'right']}>
-        <View style={{ flex: 1 }}>{renderScreen()}</View>
-      </SafeAreaView>
-      <SafeAreaView edges={['bottom']} style={{ backgroundColor: '#111114' }}>
-        <View style={styles.tabbar}>
-          {TABS.map((tab) => {
-            const isActive = active === tab;
-            return (
-              <TouchableOpacity key={tab} style={styles.tab} onPress={() => setActive(tab)} activeOpacity={0.8}>
-                <Text style={[styles.tabText, { color: isActive ? '#C5A572' : '#C6C6CC' }]}>
-                  {tab}
-                </Text>
-                {isActive ? <View style={styles.indicator} /> : <View style={{ height: 2 }} />}
-              </TouchableOpacity>
-            );
-          })}
-        </View>
-      </SafeAreaView>
-    </View>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: '#0B0B0D' },
+      }}
+    >
+      <Stack.Screen name="ModelsList" component={ModelsScreen} />
+      <Stack.Screen name="ModelDetail" component={ModelDetailScreen} />
+    </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  tabbar: {
-    flexDirection: 'row',
-    backgroundColor: '#111114',
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(255,255,255,0.08)',
-    paddingHorizontal: 16,
-  },
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    paddingVertical: 12,
-  },
-  tabText: {
-    fontWeight: '700',
-    letterSpacing: 0.5,
-  },
-  indicator: {
-    height: 2,
-    width: 28,
-    borderRadius: 2,
-    backgroundColor: '#C5A572',
-    marginTop: 6,
-  },
-});
+function MainTabs() {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarIcon: () => null,
+        tabBarStyle: {
+          backgroundColor: '#111114',
+          borderTopWidth: 1,
+          borderTopColor: 'rgba(255,255,255,0.08)',
+          height: 72,
+          paddingTop: 8,
+          paddingBottom: 16,
+          paddingHorizontal: 16,
+        },
+        tabBarActiveTintColor: '#C5A572',
+        tabBarInactiveTintColor: '#9C9CAA',
+        tabBarLabelStyle: {
+          fontWeight: '700',
+          letterSpacing: 0.6,
+          textTransform: 'uppercase',
+          fontSize: 12,
+        },
+        tabBarItemStyle: {
+          paddingVertical: 6,
+        },
+      }}
+    >
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Models" component={ModelsStack} />
+      <Tab.Screen name="About" component={AboutScreen} />
+      <Tab.Screen name="Contact" component={ContactScreen} />
+    </Tab.Navigator>
+  );
+}
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <StatusBar style="light" />
+        <MainTabs />
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+}
