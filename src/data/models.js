@@ -84,7 +84,7 @@ export const models = [
         "name": "Vantage (2018–2024)",
         "price": "$150,000",
         "category": "Production",
-        "image": "https://images.hgmsites.net/2019-aston-martin-vantage_100679876_h.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/2019_Aston_Martin_Vantage_V8_Automatic_4.0_%281%29.jpg",
         "description": "Previous-generation Vantage with a bonded aluminum structure and AMG-sourced twin-turbo V8, available as coupe or roadster.",
         "specs": {
             "engine": "4.0L Twin-Turbo V8",
@@ -372,7 +372,7 @@ export const models = [
         "name": "CC100 Speedster Concept (2013)",
         "price": "$770,000–$1,500,000",
         "category": "Concept",
-        "image": "https://www.supercars.net/blog/wp-content/uploads/2020/10/2013-Aston-Martin-CC100-Speedster-Concept-001-1600.jpg",
+        "image": "https://www.astonmartin.com/-/media/aston-martin/images/heritage/past-models/cc100/cc100-2-jpg.jpg?mw=1920&rev=877912c70d834f84827ed12287c66c0d&hash=50A138F30B2F4EBE7F461EB87604C58B",
         "description": "Limited to one car, the CC100 was built to celebrate Aston Martin's centenary, inspired by the 1959 DBR1 race car.",
         "specs": {
             "engine": "6.0L Naturally Aspirated V12",
@@ -404,7 +404,7 @@ export const models = [
         "name": "Project Vantage Concept (2015)",
         "price": "Concept",
         "category": "Concept",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/project-vantage-concept.jpg",
+        "image": "https://img.carswp.com/aston-martin/vanquish/photos_aston-martin_vanquish_1998_1.jpg",
         "description": "Design study and concept for a next-generation Vantage with modern performance and styling cues.",
         "specs": {
             "engine": "Concept Twin-Turbo V8",
@@ -420,7 +420,7 @@ export const models = [
         "name": "Vanquish Zagato Concept (2016)",
         "price": "Concept",
         "category": "Concept",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-vanquish-zagato-concept.jpg",
+        "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMZqj_4uY8wI/v3/-1x-1.webp",
         "description": "Collaboration concept between Aston Martin and Zagato showcasing extreme performance and Italian design language.",
         "specs": {
             "engine": "5.9L Twin-Turbo V12",
@@ -436,7 +436,7 @@ export const models = [
         "name": "V12 Speedster (2020–2021)",
         "price": "$1,000,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-v12-speedster.jpg",
+        "image": "https://news.dupontregistry.com/wp-content/uploads/2020/03/aston-martin-v12-speedster-3.jpg",
         "description": "Limited to 88 units, an open-cockpit roadster with no roof or windscreen, powered by a naturally aspirated V12.",
         "specs": {
             "engine": "5.2L Twin-Turbo V12",
@@ -452,7 +452,7 @@ export const models = [
         "name": "One-77 (2009–2012)",
         "price": "$2,000,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-one-77.jpg",
+        "image": "https://www.supercars.net/blog/wp-content/uploads/2016/04/2009_AstonMartin_One77Prototype2.jpg",
         "description": "Hypercar limited to 77 units with a carbon fiber monocoque, hand-built aluminum body, and the most powerful naturally aspirated V12 at launch.",
         "specs": {
             "engine": "7.3L Naturally Aspirated V12",
@@ -468,7 +468,7 @@ export const models = [
         "name": "Vulcan (2015–2016)",
         "price": "$2,300,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-vulcan.jpg",
+        "image": "https://s1.cdn.autoevolution.com/images/gallery/ASTON-MARTIN-Vulcan-5799_16.jpg",
         "description": "Track-only hypercar limited to 24 units with radical aerodynamics, carbon fiber construction, and a naturally aspirated V12.",
         "specs": {
             "engine": "7.0L Naturally Aspirated V12",
@@ -484,7 +484,7 @@ export const models = [
         "name": "Valkyrie (2021–2024)",
         "price": "$3,000,000",
         "category": "Production",
-        "image": "https://www.astonmartin.com/-/media/models/valkyrie/valkyrie-hero.jpg",
+        "image": "https://media.gq-magazine.co.uk/photos/6405fb643e977a7efb8a7764/16:9/w_1920,h_1080,c_limit/Aston-Martin-Valkyrie-HED.jpg",
         "description": "Extreme limited-production hypercar developed with Red Bull Advanced Technologies, featuring radical aerodynamics and an F1-style powertrain.",
         "specs": {
             "engine": "6.5L Naturally Aspirated V12 + Hybrid",
@@ -500,7 +500,7 @@ export const models = [
         "name": "Valkyrie AMR Pro (2021–present)",
         "price": "$3,200,000",
         "category": "Production / Track-Only",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-valkyrie-amr-pro.jpg",
+        "image": "https://static.wixstatic.com/media/f2b0f7_3a33795f4d2c461d8964a5004ce9d131~mv2.jpg/v1/fill/w_3000,h_2000,al_c,q_90/Valkyrie%20Le%20Mans-20.jpg",
         "description": "Track-only extreme evolution of the Valkyrie with race-optimized chassis, extended wheelbase, and enhanced aerodynamics. Designed to lap Le Mans in 3m20s.",
         "specs": {
             "engine": "6.5L Naturally Aspirated V12",
@@ -516,7 +516,7 @@ export const models = [
         "name": "Victor (2020)",
         "price": "$4,000,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-victor.jpg",
+        "image": "https://global.discourse-cdn.com/forza/original/3X/0/a/0ade4bfe8d5487a069b9dacbc2b8e438a125bf15.jpeg",
         "description": "One-off bespoke supercar combining One-77, Vulcan, and Valkyrie components with a Cosworth-tuned V12 and manual gearbox.",
         "specs": {
             "engine": "7.3L Naturally Aspirated V12",
@@ -532,7 +532,7 @@ export const models = [
         "name": "Valour (2023–2024)",
         "price": "$2,000,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-valour.jpg",
+        "image": "https://www.thesupercarblog.com/wp-content/uploads/2024/12/2024-Aston-Martin-Valour-for-sale-USA-1.jpg",
         "description": "Limited to 110 units, celebrating Aston Martin's 110th anniversary with a V12 engine and manual gearbox.",
         "specs": {
             "engine": "5.2L Twin-Turbo V12",
@@ -548,7 +548,7 @@ export const models = [
         "name": "Valiant (2024–2025)",
         "price": "$2,200,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-valiant.jpg",
+        "image": "https://d2l6r91nnee1so.cloudfront.net/media/dsc_5434_ac276069bb.jpg",
         "description": "Track-focused variant of the Valour commissioned by Fernando Alonso, limited to 38 units with lightweight carbon body and race-inspired setup.",
         "specs": {
             "engine": "5.2L Twin-Turbo V12",
@@ -564,7 +564,7 @@ export const models = [
         "name": "Valhalla",
         "price": "$800,000",
         "category": "Production",
-        "image": "https://www.astonmartin.com/-/media/models/valhalla/valhalla-hero.jpg",
+        "image": "https://media.astonmartin.com/wp-content/uploads/2025/01/4c81bb8af855efa94c438d21801b4b4a.jpg",
         "description": "Mid-engined plug-in hybrid supercar with Formula 1–inspired aerodynamics and extreme performance on road and track.",
         "specs": {
             "engine": "4.0L Twin-Turbo V8 + Hybrid",
@@ -580,7 +580,7 @@ export const models = [
         "name": "Cygnet (2011–2013)",
         "price": "$45,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-cygnet.jpg",
+        "image": "https://media.astonmartin.com/wp-content/uploads/2024/10/885a095517f93a70bb5ad89096217ca3-m.jpg.webp",
         "description": "Luxury city car based on the Toyota iQ, produced to meet EU emissions regulations with bespoke Aston Martin interior.",
         "specs": {
             "engine": "1.3L Inline-Four",
@@ -596,7 +596,7 @@ export const models = [
         "name": "Lagonda Taraf (2015–2016)",
         "price": "$1,000,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/lagonda-taraf.jpg",
+        "image": "https://www.classicdriver.com/sites/default/files/cars_images/taraf_1.jpg",
         "description": "Ultra-exclusive luxury sedan with extensive carbon fiber, swan doors, and a naturally aspirated V12 engine. Only 120 built.",
         "specs": {
             "engine": "5.9L Naturally Aspirated V12",
@@ -612,7 +612,7 @@ export const models = [
         "name": "Vanquish Zagato (2016–2017)",
         "price": "$650,000",
         "category": "Production",
-        "image": "https://cdn.motor1.com/images/mgl/7Z3kz/s1/aston-martin-vanquish-zagato.jpg",
+        "image": "https://www.motortrend.com/uploads/sites/5/2016/05/Aston-Martin-Vanquish-Zagato-Concept-front-three-quarter.jpg",
         "description": "Limited to 99 coupe and 99 roadster units, a collaboration between Aston Martin and Zagato with Italian design heritage.",
         "specs": {
             "engine": "5.9L Naturally Aspirated V12",
