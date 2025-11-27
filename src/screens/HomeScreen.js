@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeroBanner from '../components/HeroBanner';
 import FeaturedCarousel from '../components/FeaturedCarousel';
 import { models } from '../data/models';
+import BookingFormModal from '../components/BookingFormModal';
 
 const featuredModels = models.slice(0, 4);
 const stats = [
@@ -21,6 +22,8 @@ const storyQuote =
     '“Aston Martin occupies a special place in automotive history — balancing raw performance with pure sculpture.”';
 
 export default function HomeScreen() {
+    const [formVisible, setFormVisible] = useState(false);
+
     return (
         <SafeAreaView style={styles.container} edges={['top']}>
             <ScrollView contentContainerStyle={styles.content}>
@@ -46,7 +49,7 @@ export default function HomeScreen() {
                     ))}
                 </View>
 
-                
+
 
                 <View style={styles.sectionHeader}>
                     <Text style={styles.eyebrow}>Signature Collection</Text>
@@ -56,7 +59,12 @@ export default function HomeScreen() {
 
                 <View style={styles.quickActions}>
                     {quickActions.map((action) => (
-                        <TouchableOpacity key={action.id} style={styles.quickCard} activeOpacity={0.85}>
+                        <TouchableOpacity
+                            key={action.id}
+                            style={styles.quickCard}
+                            activeOpacity={0.85}
+                            onPress={() => setFormVisible(true)}
+                        >
                             <View style={styles.quickBadge} />
                             <View>
                                 <Text style={styles.quickTitle}>{action.title}</Text>
@@ -73,6 +81,7 @@ export default function HomeScreen() {
                     <Text style={styles.storyAuthor}>— Design Director, Gaydon Studio</Text>
                 </View>
             </ScrollView>
+            <BookingFormModal visible={formVisible} onClose={() => setFormVisible(false)} />
         </SafeAreaView>
     );
 }

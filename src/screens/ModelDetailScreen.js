@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
+import BookingFormModal from '../components/BookingFormModal';
 
 export default function ModelDetailScreen({ route }) {
     const { model } = route.params;
     const navigation = useNavigation();
     const [imageLoading, setImageLoading] = useState(true);
     const [imageError, setImageError] = useState(false);
+    const [formVisible, setFormVisible] = useState(false);
 
     return (
         <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
@@ -84,11 +86,16 @@ export default function ModelDetailScreen({ route }) {
                         </View>
                     </View>
 
-                    <TouchableOpacity style={styles.ctaButton} activeOpacity={0.9}>
+                    <TouchableOpacity style={styles.ctaButton} activeOpacity={0.9} onPress={() => setFormVisible(true)}>
                         <Text style={styles.ctaButtonText}>Book a Test Drive</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
+            <BookingFormModal
+                visible={formVisible}
+                onClose={() => setFormVisible(false)}
+                modelName={model.name}
+            />
         </SafeAreaView>
     );
 }
