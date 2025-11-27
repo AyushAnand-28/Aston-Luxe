@@ -18,11 +18,7 @@ export default function ContactScreen() {
     return (
         <SafeAreaView style={styles.container} edges={['top']}>
             <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-                <View style={styles.card}>
-                    <TouchableOpacity style={styles.button} onPress={() => setFormVisible(true)} activeOpacity={0.9}>
-                        <Text style={styles.buttonText}>Book a Test Drive</Text>
-                    </TouchableOpacity>
-                </View>
+                
 
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>India Showroom</Text>
@@ -51,6 +47,12 @@ export default function ContactScreen() {
                             <Text style={styles.mapLink}>View on Map</Text>
                         </TouchableOpacity>
                     </View>
+
+                </View>
+                <View >
+                    <TouchableOpacity style={styles.button} onPress={() => setFormVisible(true)} activeOpacity={0.9}>
+                        <Text style={styles.buttonText}>Book a Test Drive</Text>
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
             <BookingFormModal visible={formVisible} onClose={() => setFormVisible(false)} />
