@@ -626,7 +626,6 @@ export const models = [
 ];
 
 
-// Simple categorization helpers
 export function getCategoryForModel(model) {
     const id = model.id.toLowerCase();
     const name = model.name?.toLowerCase() ?? '';
